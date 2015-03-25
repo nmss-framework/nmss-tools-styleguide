@@ -74,7 +74,8 @@ gulp.task('tpl', function() {
 
 gulp.task("serve", function() {
 
-    //gulp.start('sass');
+    gulp.start('sass');
+    gulp.start('tpl');
 
     var server = gls.new('bin/server.js');
     server.start();
