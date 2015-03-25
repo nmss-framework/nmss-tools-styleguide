@@ -35,7 +35,6 @@
     "gulp-sourcemaps": "^1.5.0",
     "nmss": "^0.1.4",
     "nmss-theme-prototype": "^1.0.1",
-    "nmss-theme-sportmaniacs": "git+https://javisport@bitbucket.org/sportmaniacs/nmss-theme-sportmaniacs.git",
     "node-sass": "^3.0.0-pre",
     "parcelify": "^0.12.5",
     "rest": "^1.3.0",
