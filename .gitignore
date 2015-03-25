@@ -1,4 +1,5 @@
 node_modules
-doc/tpl/nmss.tpl
 dist/
-doc/css/
+doc/css/nmss/
+doc/tpl/nmss.tpl
+
