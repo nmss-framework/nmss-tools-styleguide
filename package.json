@@ -1,13 +1,8 @@
 {
   "name": "nmss-tools-styleguide",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "nmss css styleguide",
   "main": "index.js",
-  "scripts": {
-    "test": "test",
-    "build-doc": "browserify doc/js/doc.js > doc/js/doc.bundle.js -v",
-    "watch-doc": "watchify doc/js/doc.js -o doc/js/doc.bundle.js -v"
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/nmss-framework/nmss-tools-styleguide.git"
