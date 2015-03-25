@@ -14,7 +14,7 @@ var PATHS = {
     src: './src',
     dist: './dist',
     doc: './doc',
-    node_modules: '../node_modules'
+    node_modules: './node_modules'
 };
 
 function onError() {
@@ -46,7 +46,7 @@ var nmssThemePath = PATHS.node_modules + '/nmss-theme-' + nmssTheme + '/theme/nm
 var sassString = '@import "' + nmssThemePath + '"; @import "' + nmssScssPath + '";';
 
 
-gulp.task('sass', function() {
+gulp.task('scss', function() {
     fileToSrc('nmss.scss', sassString)
         .pipe(sass({
             outputStyle: 'compressed',
@@ -66,7 +66,7 @@ gulp.task('js', function() {
 });
 
 gulp.task('tpl', function() {
-    return gulp.src(PATHS.node_modules + 'nmss/src/**/*.tpl')
+    return gulp.src(PATHS.node_modules + '/nmss/src/units/**/*.tpl')
         .pipe(plumber(onError()))
         .pipe(concat('nmss.tpl'))
         .pipe(gulp.dest(PATHS.doc + '/tpl'));
@@ -74,7 +74,7 @@ gulp.task('tpl', function() {
 
 gulp.task("serve", function() {
 
-    gulp.start('sass');
+    gulp.start('scss');
     gulp.start('tpl');
 
     var server = gls.new('bin/server.js');
@@ -82,4 +82,6 @@ gulp.task("serve", function() {
 
     gulp.watch([PATHS.src + '/**/*.scss', PATHS.src + '/**/*.tpl'], ['scss', 'tpl']);
     gulp.watch(PATHS.doc + '/js/**/*.js', ['tpl']);
+
+    console.info("See the styleguide here http://localhost:3000");
 });

@@ -22,7 +22,7 @@ Grab a cofee
 gulp serve
 ```
 
-A livereload server will be created at "localhost:7894" so you can play with it.
+A livereload server will be created at "localhost:3000" so you can play with it.
 
 
 
