@@ -11,7 +11,7 @@ Pre-Alpha.
 ## How to use it
 
 ```
-https://github.com/rlucha/nmss.git
+https://github.com/nmss-framework/nmss-tools-styleguide.git
 cd nmss
 npm i
 ```
